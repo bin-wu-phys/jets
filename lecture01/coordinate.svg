@@ -15,7 +15,10 @@
    height="320"
    viewBox="0 0 620 320"
    sodipodi:docname="coordinate.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:export-filename="coordinate.png"
+   inkscape:export-xdpi="273.51901"
+   inkscape:export-ydpi="273.51901">
   <metadata
      id="metadata875">
     <rdf:RDF>
@@ -24,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -168,7 +171,7 @@
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:zoom="0.97962224"
-     inkscape:cx="574.78428"
+     inkscape:cx="394.61279"
      inkscape:cy="44.104276"
      inkscape:window-x="72"
      inkscape:window-y="27"
@@ -177,7 +180,7 @@
      inkscape:snap-global="false" />
   <g
      id="g1411"
-     transform="translate(-103.58307,2.7198818e-6)">
+     transform="translate(-103.58307,6.0000027)">
     <ellipse
        style="opacity:1;fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.01664877;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse883"
@@ -271,14 +274,15 @@
          y="198.44374">z</tspan></text>
     <text
        id="text1256"
-       y="318.77353"
-       x="474.44305"
+       y="307.54471"
+       x="490.77588"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         y="318.77353"
-         x="474.44305"
+         y="307.54471"
+         x="490.77588"
          id="tspan1254"
-         sodipodi:role="line">center of LHC</tspan></text>
+         sodipodi:role="line"
+         style="font-size:26.66666603px">center of LHC</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -354,4 +358,14 @@
          id="tspan1304"
          sodipodi:role="line">θ</tspan></text>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="158.22426"
+     y="53.445961"
+     id="text2188"><tspan
+       sodipodi:role="line"
+       id="tspan2186"
+       x="158.22426"
+       y="53.445961">ATLAS/CMS</tspan></text>
 </svg>
