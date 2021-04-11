@@ -1,0 +1,53 @@
+% $Id: appendix-simulation-details.tex 435 2018-12-17 22:53:31Z mspannow $
+\chapter{Details of Monte Carlo simulations}\label{chap:app-simulation-details}
+
+In this appendix, we provide the details of the parton-shower Monte Carlo
+simulations presented throughout this book.
+
+For all the results shown in
+Chapters~\ref{calculations-substructure-mass},
+\ref{sec:calc-shapes-qg} and \ref{sec:curiosities}, we have used the
+Pythia~8 generator~\cite{Sjostrand:2014zea,Sjostrand:2007gs} (version
+8.230) with the Monash 2013 tune~\cite{Skands:2014pea}.
+%
+The analytic results are always compared to Monte Carlo results at
+parton level, where both hadronisation and the Underlying Event have
+been switched off.
+%
+The ``hadron level'' corresponds to switching on hadronisation but
+keeping multi-parton interactions off, while the ``hadron+UE'' level
+includes both hadronisation and the Underlying Event.
+%
+In the last two cases, $B$-hadrons have been kept stable for
+simplicity.\footnote{Except for the groomed jet mass study in
+  Sec.~\ref{sec:calc-groomed-mass-mc} where $B$-hadron decays are
+  enabled.}
+%
+For the samples labelled as ``quark jets'', we have used Pythia's
+dijet hard processes, keeping only the $qq\to qq$ matrix
+elements. Similarly the ``gluon jet'' samples keep only the $gg\to gg$.
+
+For all studies, jet reconstruction and manipulations are performed
+using FastJet~\cite{Cacciari:2011ma,Cacciari:2005hq}
+(version~3.3). Our studies include all the jets above the specified
+$p_t$ cut and with $|y|<4$.
+%
+Substructure tools which are not natively included in FastJet are
+available from {\tt {fastjet-contrib}}.
+
+In the case of the discrimination between boosted W jets and QCD
+jets in Chapter~\ref{chap:calc-two-prongs}, we have used the same
+samples as those used in the initial Les-Houches 2017 Physics at TeV
+colliders workshop.
+%
+These use essentially the same generator settings as above, but now
+only up to the two hardest jets with $|y|<2.5$ are kept.
+
+
+%% GS helper for auctex
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:
+
+%  LocalWords:  Monash UE Pythia's qq gg natively Houches

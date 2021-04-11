@@ -1,0 +1,284 @@
+% $Id: appendix-analytic-details.tex 522 2019-04-16 14:42:14Z gsoyez $
+\chapter{Details of analytic calculations}\label{chap:app-analytic-details}
+
+In this appendix we detail the analytic calculations that we have to
+perform in order to obtain the resummed exponents discussed in the
+main text. As an example we consider the plain jet mass distribution
+discussed in Chapter~\ref{chap:calculations-jets}. The generalisation
+to other jet substructure observables merely adds additional
+phase-space constraints, yielding longer expressions without changing
+the steps of the calculation. It is left as an exercise for the
+interested reader.
+
+We therefore consider the resummed expression
+Eq.~(\ref{eq:res-mass-cont}) and we focus on the resummed exponent
+(focusing here on a quark-initiated jet, although similar results can
+trivially be obtained for gluon-initiated jets)
+\begin{align}\label{app:analytic-start}
+R(\rho)=\int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 dz  P_{q}(z)
+  \frac{\as( \sqrt{z \rho'} R \mu)}{2 \pi} ,
+\end{align}
+where $\mu$ is the hard scale of the process, i.e.\ $\mu=\frac{Q}{2}$
+for electron-positron collisions or $\mu=p_t$ for proton-proton
+collision, while as usual $R$ is the jet radius, and
+$\rho=\tfrac{m^2}{\mu^2R^2}$. For the above expression to capture the
+resummed exponent to NLL accuracy in the small-$R$ limit, we need to
+make sure that 
+\begin{itemize}
+\item the running of the coupling is considered at two loops, i.e.\ with $\beta_0$ and $\beta_1$:
+\begin{align}\label{app:running-coupling}
+\as(k_t)=\frac{\as(R\mu)}{1+\tlambda}\left[ 1- \as(\mu R)
+  \frac{\beta_1}{\beta_0} \frac{\log(1+\tlambda)}{1+\tlambda}\right],
+  \quad \tlambda=2\as(R\mu) \beta_0 \log\left(\frac{k_t}{R\mu}\right),
+\end{align}
+where the $\beta$ function coefficients
+$\beta_0$ and $\beta_1$ are 
+\begin{equation}
+\beta_0 = \frac{11 C_A - 2 n_f }{12 \pi}, \quad \beta_1 = \frac{17 C_A^2 - 5 C_A n_f -3 C_F n_f}{24 \pi^2}.
+\end{equation}
+\item the splitting function is considered at one loop;
+\item the coupling is considered in the CMW scheme (or equivalently
+  the soft contribution to the two-loop splitting function is
+  included), cf.~Eq.~(\ref{eq:CMW}).
+\end{itemize}
+
+
+As a warm up, let us first evaluate the above integral to LL where, we
+can limit ourselves to the soft limit of the splitting function and to
+the one-loop approximation for the running coupling. We have (with
+$\lambda'=\as \beta_0\log(\rho')$ and $\lambda"=\as \beta_0\log(z)$)
+\begin{align}\label{app:analytic-LL}
+R^{\text{(LL)}} & = \int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 \frac{d
+                  z}{z}\frac{\as( \sqrt{z \rho'} R\mu)C_F}{\pi}  \\
+  &=
+\frac{ \as C_F}{\pi} \ \int_\rho^1 \frac{d \rho'}{\rho'}
+    \int_{\rho'}^1 \frac{d z}{z} \frac{1}{1+ \as \beta_0 \log ( z
+    \rho')}  \nonumber \\
+& =\frac{C_F}{\as \pi \beta_0^2}  \int_\frac{-\lambda}{2}^0 d \lambda'
+    \int_{\lambda'}^0 d \lambda'' \frac{1}{1+\lambda'+\lambda'' } \nonumber\\
+&= \frac{C_F}{2 \pi \beta_0^2 \as} \left[(1- \lambda) \log(1-\lambda)-2\left (1-\frac{\lambda}{2}\right) \log \left(1-\frac{\lambda}{2}  \right)\right],\nonumber\\
+&= \frac{C_F}{2 \pi \beta_0^2 \as} \left[W(1- \lambda)-2W\left (1-\frac{\lambda}{2}\right)\right],\nonumber
+\end{align}
+where $\as\equiv\as(R\mu)$ is the $\MSb$ coupling,
+$\lambda=2 \as \beta_0 \log \big(\frac{1}{\rho}\big)$, and $W(x)=x\log(x)$. The
+above result can be then easily recast in the form of the $f_1$
+function Eq.~(\ref{eq:quark}), which appears in the expression for the
+resummed exponent Eq.~(\ref{eq:radiator-nll-expansion}).
+
+Next, we consider the inclusion of the hard-collinear contribution. For this we have to include regular part of the splitting function. Thus, we have to evaluate the following integral:
+\begin{align}\label{app:analytic-B-term}
+  \delta R^\text{(hard-collinear)}
+  &= \int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 \frac{d z}{z}\left[P_q(z)- \frac{2}{z} \right] \frac{\as( \sqrt{z \rho'} R\mu)}{\pi}
+\nonumber \\
+&= \frac{2C_F \as }{\pi}  \int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 d z\left[-1+\frac{z}{2} \right] \frac{1}{1+ \as \beta_0 \log ( z \rho')}.
+\end{align}
+When evaluating the expression above to NLL we can make the further
+simplifications that, since we are working in the hard-collinear
+limit, we can set $z=1$ in the running-coupling contribution.
+%
+We are left with an integral over $z$ with no logarithmic
+enhancement so, up to power corrections in $\rho$, we can safely set
+the lower limit of integration to $z=0$. The two integrals decouple
+and we find
+\begin{align}\label{app:analytic-B-term-ctd}
+\delta R^\text{(hard-collinear)}
+  &= \frac{C_F \as }{\pi}  \int_{0}^1 dz
+    \left[-1+\frac{z}{2} \right]  \int_\rho^1 \frac{d
+    \rho'}{\rho'}\frac{1}{1+ \as \beta_0 \log(\rho')}
+  =-\frac{C_F }{\pi \beta_0}B_q \log\left( 1-\frac{\lambda}{2}\right),
+\end{align}
+with
+\begin{equation}\label{eq:definition-B-quark}
+  B_q = \int_0^1 dz \left[\frac{P_q(z)}{2C_F}-\frac{1}{z} \right] =  \int_{0}^1 dz \left[-1+\frac{z}{2} \right] = -\frac{3}{4},
+\end{equation}
+already defined in Eq.~(\ref{eq:B1}).
+%
+Note that for a gluon-initiated jet one should instead use the gluon
+splitting function, Eq.~(\ref{eq:gluonsplitting}), which includes a
+contribution from $g\to gg$ splitting and one from $g\to q\bar q$
+splitting:
+\begin{equation}\label{eq:definition-B-gluon}
+  B_g =  \int_0^1 dz \left[\frac{P_g(z)}{2C_A}-\frac{1}{z} \right] =
+  -\frac{11 C_A-2n_f}{12 C_A}.
+\end{equation}
+%
+Since hard-collinear splittings often have a large numerical impact
+and are relatively easy to include, one often works in the {\em
+  modified LL approximation} where one includes the LL contribution
+$R^\text{(LL)}$ as well as hard-collinear splittings,
+$\delta R^\text{(hard-collinear)}$.
+
+Before moving on to the other NLL contributions to the Sudakov
+exponent, we would like to comment on an alternative way to achieve
+modified leading logarithmic accuracy and include the ``$B$-term'' in the LL
+expressions. We note that if we replace the actual splitting function
+by any other expressions which behaves like $\tfrac{2C_i}{z}$ at small
+$z$ and reproduces the correct $B_i$ term in
+Eqs.~\eqref{eq:definition-B-quark} and~\eqref{eq:definition-B-gluon},
+we would then recover the same modified-LL behaviour.
+%
+In particular, we can use
+\begin{equation}\label{eq:splitting-B-term}
+  P_i^\text{(modified-LL)}(z) =
+  \frac{2C_i}{z}\Theta\big(z<e^{B_i}\big).
+\end{equation}
+This is equivalent to imposing a cut on $z$ in the LL integrals.
+%
+For example, Eq.~(\ref{app:analytic-LL}) would become
+\begin{align}\label{app:analytic-LL-modB}
+  R^{\text{(modified-LL)}}
+  & = \int_\rho^1 \frac{d \rho'}{\rho'}
+    \int_{\rho'}^{e^{B_i}} \frac{d z}{z}
+    \frac{\as( \sqrt{z \rho'} R\mu)C_F}{\pi}  \\
+  &= \frac{C_i}{2 \pi \beta_0^2 \as} \left[
+    W(1- \lambda)
+    -2W\left (1-\frac{\lambda+\lambda_B}{2}\right)
+    +W(1-\lambda_B)\right],\nonumber
+\end{align}
+with $\lambda_B = -2\as\beta_0B_i$.
+%
+It is straightforward to show that if we expand this to the first
+non-trivial order in $\lambda_B$, one indeed recovers
+$R^\text{(LL)}+\delta R^\text{(hard-collinear)}$.
+%
+This approach is what we have adopted for most of the results and
+plots presented in this book.
+
+Coming back to the full NLL accuracy for the resummed exponent, we also have to consider the
+contribution of the two-loop running coupling:
+\begin{align}\label{app:analytic-beta1}
+  \delta R^{\text{(2-loop)}}
+  & = -\frac{\as^2 C_i}{\pi}\frac{\beta_1}{\beta_0}
+    \int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 \frac{d z}{z} 
+    \frac{\log(1+\as\beta_0\log(z\rho'))}{(1+\as\beta_0\log(z\rho'))^2}\\
+  & = -\frac{C_i \beta_1 }{ \pi \beta_0^3}  \int_\frac{-\lambda}{2}^0 d \lambda' \int_{\lambda'}^0 d \lambda'' \; \frac{\log(1+\lambda'+\lambda'' )}{(1+\lambda'+\lambda'' )^2}\nonumber \\
+&=\frac{C_i \beta_1}{2 \pi \beta_0^3} \left [ \log \left (1-\lambda \right )-2 \log 
+\left (1-\frac{\lambda}{2} \right ) + \frac{1}{2} \log^2 \left (1-  \lambda \right ) 
+- \log^2 \left (1-\frac{\lambda}{2} \right ) \right ],\nonumber
+\end{align}
+which provides the $\beta_1$ contribution to the NLL function $f_2$ defined in Eq.~(\ref{eq:radiator-nll-contribution}).
+
+Finally, to NLL accuracy we also have to include the two-loop contribution to the splitting function in the soft limit. Because this contribution is universal it can be also expressed as a redefinition of the strong coupling, which give rise to the so-called CMW scheme Eq.~(\ref{eq:CMW}).
+%
+Thus, we have to evaluate the following integral
+\begin{align}\label{app:analytic-CMW}
+  \delta R^{\text{(CMW)}}
+  &=\frac{2 C_i K}{4 \pi^2} \int_\rho^1 \frac{d \rho'}{\rho'} \int_{\rho'}^1 \frac{d z}{z} \as^2( \sqrt{z \rho'} R\mu) \\
+&=\frac{C_i K }{ 2\pi^2 \beta_0^2}  \int_\frac{-\lambda}{2}^0 d \lambda' \int_{\lambda'}^0 d \lambda'' \frac{1}{(1+\lambda'+\lambda'' )^2}\nonumber \\
+&=\frac{C_i K }{ 4\pi^2 \beta_0^2} \left[2 \log\left(1-\frac{\lambda}{2} \right) -\log(1-\lambda)\right],\nonumber
+\end{align}
+where the coupling in the first line can be evaluated at the one-loop
+accuracy since higher-order corrections would be beyond NLL.
+%
+This contribution is the $K$ term in the NLL function $f_2$ defined in
+Eq.~(\ref{eq:radiator-nll-contribution}).
+
+
+The expressions in this appendix allow us to capture the global part
+of resummed exponent to NLL, in the small-$R$ limit. Had we decided to
+include finite $R$ correction, we would have considered also soft
+emissions at finite angles, not just from the hard parton in the jet
+but from all dipoles of the hard scattering process (see for instance
+Sec.~\ref{sec:pp-collisions} and
+Ref.~\cite{Dasgupta:2012hg}). Furthermore, we remind the reader that,
+as discussed in Chapter~\ref{chap:calculations-jets}, in order to
+achieve full NLL accuracy, one needs to consider non-global logarithms
+as well as potential logarithmic contributions originating from the
+clustering algorithm which is used to define the jet.
+
+Finally, we note that the above expressions exhibit a singular behaviour at $\lambda=1$ and $\lambda=2$.
+These singularities originate from the Landau pole of the perturbative QCD coupling and they signal the breakdown of perturbation theory. In phenomenological applications of analytic calculations this infrared region is dealt by introducing a particular prescription. For instance, one could imagine to freeze the coupling below  a non-perturbative scale $\mu_\text{NP}\simeq 1$~GeV
+\begin{equation}\label{eq:coupling-freezing}
+\bar{\alpha}_s (\mu)= \as(\mu)\Theta\left (\mu-\mu_\text{NP}\right)+\as(\mu_\text{NP})\Theta\left (\mu_\text{NP}-\mu\right).
+\end{equation}
+Other prescriptions are also possible. For example, in Monte Carlo
+simulations, the parton showers is typically switched off at a cutoff
+scale and the hadronisation model then fills the remaining
+phase-space.
+
+With the prescription Eq.~(\ref{eq:coupling-freezing}), the above
+expressions for the Sudakov exponent are modified at large
+$\lambda$. For completeness, we give the full expressions resulting
+from the more tedious but still straightforward integrations.
+To this purpose, it is helpful to introduce $W(x)=x\log(x)$,
+$V(x)=\tfrac{1}{2}\log^2(x)+\log(x)$, and
+$\lambda_\text{fr}=2\alpha_s\beta_0\log(\tfrac{\mu
+  R}{\mu_\text{NP}})$.
+%
+For $\lambda<\lambda_\text{fr}$, \ie
+$\rho>\tfrac{\mu_\text{NP}}{R\mu}$, we find
+\begin{align}
+  R^\text{(NLL)}(\lambda)
+  & = R^\text{(modified-LL)}+\delta R^\text{(2-loop)}+\delta R^\text{(CMW)}\\
+  & = \frac{C_i}{2\pi\alpha_s\beta_0^2}\Big[
+    W(1-\lambda)-2W\big(1-\frac{\lambda+\lambda_B}{2}\big)+W(1-\lambda_B)
+    \Big]\nonumber\\
+  & +\frac{C_i\beta_1}{2\pi\beta_0^3}\Big[
+    V(1-\lambda)-2V\big(1-\frac{\lambda+\lambda_B}{2}\big)+V(1-\lambda_B)
+    \Big]\nonumber\\
+  & -\frac{C_iK}{4\pi^2\beta_0^2}\Big[
+    \log(1-\lambda)-2\log\big(1-\frac{\lambda+\lambda_B}{2}\big)+\log(1-\lambda_B)
+    \Big],\nonumber
+\end{align}
+in agreement with Eqs.~(\ref{app:analytic-LL-modB}),
+(\ref{app:analytic-beta1}) and~(\ref{app:analytic-CMW}) above.
+%
+We note that the above expressions have included the $B$ term using
+the trick of Eq.~\eqref{eq:splitting-B-term} for all terms including
+the two-loop and CMW corrections. In these terms, one can set
+$\lambda_B=0$ at NLL accuracy. Although keeping these contribution has
+the drawback of introducing uncontrolled subleading corrections, it
+comes with the benefit of providing a uniform treatment of
+hard-collinear splitting which places the endpoint of all the terms in
+the resummed distribution at $\lambda=\lambda_B$.
+
+For $\lambda_\text{fr}<\lambda<2\lambda_\text{fr}$, \ie
+$\big(\tfrac{\mu_\text{NP}}{R\mu}\big)^2<\rho<\tfrac{\mu_\text{NP}}{R\mu}$,
+we start being sensitive to the freezing of the coupling at
+$\mu_\text{NP}$. In this case, we find
+\begin{align}
+  &R^\text{(NLL)}(\lambda)\\
+  &\quad = \frac{C_i}{2\pi\alpha_s\beta_0^2}\Big[
+    (1-\lambda)\log(1-\lambda_\text{fr})-2W\big(1-\frac{\lambda+\lambda_B}{2}\big)+W(1-\lambda_B)+\frac{1}{2}\frac{(\lambda-\lambda_\text{fr})^2}{1-\lambda_\text{fr}}
+    \Big]\nonumber\\
+  &\quad +\frac{C_i\beta_1}{2\pi\beta_0^3}\Big[
+    \frac{1}{2}\log^2(1-\lambda_\text{fr})+\frac{1-\lambda}{1-\lambda_\text{fr}}\log(1-\lambda_\text{fr})-2V\big(1-\frac{\lambda+\lambda_B}{2}\big)+V(1-\lambda_B)\nonumber\\
+  &\quad\phantom{+\frac{C_i\beta_1}{2\pi\beta_0^3}\Big[}
+    -\frac{\lambda-\lambda_\text{fr}}{1-\lambda_\text{fr}}-\frac{1}{2}\frac{(\lambda-\lambda_\text{fr})^2}{(1-\lambda_\text{fr})^2}\log(1-\lambda_\text{fr})
+    \Big]\nonumber\\
+  &\quad -\frac{C_iK}{4\pi^2\beta_0^2}\Big[
+    \log(1-\lambda_\text{fr})-2\log\big(1-\frac{\lambda+\lambda_B}{2}\big)+\log(1-\lambda_B)-\frac{\lambda-\lambda_\text{fr}}{1-\lambda_\text{fr}}-\frac{1}{2}\frac{(\lambda-\lambda_\text{fr})^2}{(1-\lambda_\text{fr})^2}
+    \Big].\nonumber
+\end{align}
+
+Finally, for $\lambda>2\lambda_\text{fr}$, \ie
+$\rho<\big(\tfrac{\mu_\text{NP}}{R\mu}\big)^2$, we have
+\begin{align}
+  R^\text{(NLL)}(\lambda)
+  & = R^\text{(NLL)}(\lambda_\text{fr})\\
+  & + \frac{C_i}{2\pi\alpha_s\beta_0^2}
+    \frac{(\lambda-\lambda_B)^2-2(\lambda_\text{fr}-\lambda_B)^2}{4(1-\lambda_\text{fr})}
+    \Big[
+    1-\frac{\alpha_s\beta_1}{\beta_0}\frac{\log(1-\lambda_\text{fr})}{1-\lambda_\text{fr}}
+    +\frac{\alpha_s K}{2\pi}\frac{1}{1-\lambda_\text{fr}}
+    \Big].\nonumber
+\end{align}
+
+For all the analytic plots in this paper, we have used
+$\alpha_s(M_Z)=0.1265$ (following the value used for the (one-loop)
+running coupling in Pythia8 with the Monash 2013 tune), freezing
+$\alpha_s$ at $\mu_\text{NP}=1$~GeV and used five active massless
+flavours. 
+%
+Note finally that (modified)-LL results only include one-loop running
+coupling effects.
+
+
+%% GS helper for auctex
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:
+
+
+%  LocalWords:  Eq NLL CMW Eqs eq Monash

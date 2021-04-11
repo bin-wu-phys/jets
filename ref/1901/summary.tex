@@ -1,0 +1,199 @@
+% $Id: summary.tex 497 2019-01-29 15:01:30Z smarzani $
+%
+% Summary and discussions of our results
+%------------------------------------------------------------------------
+\chapter{Take-home messages and perspectives}\label{summary}
+
+Since many facets and applications of jet substructure have been
+covered in this book, it is useless to try and summarise them
+all individually.
+%
+Instead, in this concluding chapter, we will briefly summarise the
+main lessons we have learned from about a decade of jet
+substructure studies and from the aspects covered in this book.
+
+The first observation is that jet substructure has been a great 
+success, both from a theoretical viewpoint and from an
+experimental viewpoint. 
+%
+It took only a few years for the initial idea of
+looking at the internal dynamics of jets to grow and develop a myriad
+of new tools, opening doors to explore all sorts of new physics
+domains.
+%
+Furthermore, as searches and measurements probe larger and larger
+energy scales, boosted-object and jet substructure algorithms are
+increasingly relied upon. In particular, at a possible future circular
+hadron collider with $\sqrt{s}$ as large as 100~TeV, boosted jets
+would be almost omnipresent.
+
+In practice, jet substructure tools are rooted in the theory of strong
+interactions. The first generation of substructure techniques were
+designed based on core concepts and features of QCD: a QCD jet is
+usually made of a single hard core accompanied with soft particles
+corresponding to soft-gluon radiation, while boosted massive objects
+decay into several hard prongs accompanied by further soft radiation
+(at smaller angles if the initial particle is colourless).
+%
+Key techniques, many of which still in use today, have been developed
+starting from these fundamental observations, allowing to establish
+jet substructure as a powerful and promising field.
+%
+A few years later, the introduction of a new generation of
+substructure tools was made possible by a better understanding of the
+QCD dynamics inside jets using analytic techniques.
+%
+This first-principle approach has allowed for a more fine-grained
+description of the underlying physics, which seeded either simpler
+and cleaner tools (e.g.\ the modified MassDropTagger and \SD) or
+tools with improved performance (e.g.\ the $D_2$ energy-correlation
+functions or dichroic ratios), all under good  theoretical control. 
+
+One of the key features repeatedly appearing when studying jet
+substructure from first principles in QCD is the necessity of a
+trade-off between performance and robustness. Here, by performance, we
+mean the discriminating power of a tool when extracting a given signal
+from the QCD background, and by robustness we mean the ability to
+describe the tool from perturbative QCD, i.e.\ being as little
+sensitive as possible to model-dependent effects such as
+hadronisation, the Underlying Event, pileup or detector effects, all
+of which likely translate into systematic uncertainties in an
+experimental analysis.
+%
+This trade-off has been seen on multiple occasions throughout this
+book.
+%
+When designing new substructure techniques, we therefore think that it
+is helpful to keep in mind both these aspects.
+
+In this context, it was realised that some tools like
+\SD or the modified MassDropTagger are amenable to precise
+calculations in perturbative QCD, while maintaining small
+hadronisation and Underlying Event corrections.
+%
+This is particularly interesting since jet substructure tools are
+often sensitive to a wide range of scales --- between the TeV scale
+down to non-perturbative scales --- offering an almost unique
+laboratory for QCD studies.
+%
+It has opened new avenues for future jet
+substructure studies. 
+%
+ A typical example is a potential for
+an extraction of the strong coupling constant from substructure
+measurements (see e.g.\ Ref.~\cite{Bendavid:2018nar}), but other
+options include the improvement of Monte Carlo parton showers,
+measurements of the top mass, or simply a better control over QCD
+background for new physics searches.
+
+Because of its potential for interesting Standard Model measurements
+across a wide range of scales, jet substructure has also recently
+found applications in heavy-ion collisions.
+%
+One of the approaches to study the quark-gluon plasma is by analysing
+how high-energy objects are affected by their propagation through it.
+%
+The LHC is the first collider where jets are routinely used for this
+type of studies and an increasing interest for jet substructure
+observables has been seen very recently in the heavy-ion community.
+%
+This will for sure be an important avenue in the future of jet
+substructure, including the development of specific observables to
+constraint the properties of the quark-gluon plasma and their study in
+QCD.
+
+The analysis of cosmic ray interactions is a further area of research
+where jet substructure techniques were introduced to study the
+detailed structure of complicated objects \cite{Brooijmans:2016lfv,
+  Aab:2018jpg}. Ultra-high-energy cosmic rays, e.g. protons, can
+produce interactions with very high momentum transfer between when
+they scatter of atoms of Earth's atmosphere. Such interactions produce
+a collimated high-multiplicity shower of electrons, photons and
+muons. Their spacial distribution and penetration depth can be
+analysed to inform the nature of the incident particle and interaction
+in the collision. It is likely that in the near future, with the
+increased interest in so-called beam-dump experiments, more ideas are
+going to be introduced where jet substructure techniques can become of
+importance.
+
+Finally, one should also expect the future to deliver its fair share
+of new tools for searches and measurements.
+%
+We believe that there are two emblematic directions worth exploring.
+%
+An obvious direction is the one of machine-learning tools. This is an
+increasingly hot topic in the jet substructure community and one
+should expect it to continue growing in importance.
+%
+In the context of the first-principle understanding used throughout
+this book, one should highlight that it is important to keep in mind
+that applying machine-learning techniques to jet substructure is not
+just a problem for computer scientists. These algorithms are to a large
+extent dealing with QCD and therefore a good control of the QCD
+aspects of jet substructure is crucial. Several examples of this have
+appeared very recently --- like QCD-aware
+networks~\cite{Louppe:2017ipp}, energy-flow polynomials and
+networks~\cite{Komiske:2017aww,Komiske:2018cqr} or the Lund jet
+plane~\cite{Dreyer:2018nbf} --- and we should definitely expect more
+in the future.
+%
+One can even imagine to extend concepts developed for jets to be
+applied to the full event, i.e. a full-information approach to study
+the whole radiation profile of an event. This could maximise the
+sensitivity of collider experiments in searches for new physics.
+
+The second direction we want to advocate for is the development of
+additional tools which are theory-friendly, i.e.\ that are under
+analytical control and are amenable for precision calculations.
+%
+As shown in this book, basic substructure tools have now been
+understood from first-principles, including the main physics aspects
+responsible for the trade-off between performance and
+robustness. However, modern boosted jet taggers involve several of
+these tools in order to maximise performance (cf.\ our discussion in
+chapter~\ref{tools}). 
+
+We think that new tools offering a combination of grooming,
+prong-finding and radiation constraints will always be of great value.
+%
+Compared to a deep-learning-based tool, this
+might show a small loss in performance, but it would offer the
+advantage of a better control of its behaviour across a wide range of
+processes and studies. One of the key ingredients here is that these
+new tools should remain as simple as possible to facilitate their
+calibration in an experimental context, hopefully resulting in small
+systematic uncertainties. This would make them usable for the
+precision programme at the LHC, including both measurements and
+searches.
+%
+From an analytic perspective, achieving precision for such
+substructure algorithms will also require further developments in
+resummation techniques and fixed-order (amplitude) calculations, where
+many promising results have already been obtained recently. 
+
+% extensions to other fields
+
+All this being said, we hope that we have conveyed the idea that jet
+substructure has been a fascinating field for almost a decade, with an
+ever-growing range of applications. Over this time-span, the field has
+managed to stay open to new ideas and new approaches. One should
+therefore expect more exciting progress in the years to come.
+%
+We therefore hope that this book gives a decent picture of the state
+of the field in early 2019 and will constitute a good introduction
+for newcomers to the field.
+
+\vspace{0.5cm}
+
+\begin{center}
+\emph{If you ain't boostin' you ain't living}\\
+\emph{\textexclamdown Boostamos!}~\cite{boostamos}
+\end{center}
+
+
+
+%% GS helper for auctex
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:

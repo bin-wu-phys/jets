@@ -1,0 +1,170 @@
+% $Id: notes.tex 493 2019-01-29 14:14:49Z gsoyez $
+%
+% This is the main file for the lecture notes
+%
+% Current Dropbox link:
+%   https://www.dropbox.com/s/fbpzb3aiqpkul1j/book_jets.pdf?dl=0
+%
+%------------------------------------------------------------------------
+\documentclass[12pt]{report}
+\pagestyle{headings}
+
+%========================================================================
+% Packages
+%========================================================================
+\usepackage{xspace}
+\usepackage{amsmath,mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{subfig}
+\usepackage{slashed}
+\usepackage{enumitem}
+\usepackage{authblk}
+\usepackage{wrapfig}
+\usepackage{hhline}
+%\usepackage[caption=false]{subfig}
+
+
+%\usepackage[printwatermark]{xwatermark}
+%\usepackage{xcolor}
+%\usepackage{lipsum}
+%\newwatermark[allpages,color=blue!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+%
+
+%this hides subsections from table of contents
+\setcounter{tocdepth}{1}
+
+%========================================================================
+% custom macros
+%========================================================================
+
+\newcommand{\GeV}{\,\mathrm{GeV}}
+\newcommand{\TeV}{\,\mathrm{TeV}}
+\newcommand{\ie}{i.e.\ }
+\newcommand{\eg}{e.g.\ }
+\newcommand{\order}[1]{{\cal O}\left(#1\right)}
+\newcommand{\avg}[1]{\left\langle\smash{#1}\right\rangle}
+\newcommand{\as}{\alpha_s}
+\newcommand{\ycut}{y_{\text{cut}}}
+\newcommand{\zcut}{z_{\text{cut}}}
+\newcommand{\fcut}{f_{\text{cut}}}
+\newcommand{\ftrim}{f_{\text{trim}}}
+\newcommand{\Rtrim}{R_{\text{trim}}}
+\newcommand{\rtrim}{r_{\text{trim}}}
+\newcommand{\zprune}{z_{\text{prune}}}
+\newcommand{\Rprune}{R_{\text{prune}}}
+\newcommand{\rprune}{r_{\text{prune}}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\cf}{C_{F}}
+\newcommand{\ca}{C_{A}}
+\newcommand{\nf}{n_{F}}
+\newcommand{\MSb}{\overline{\rm MS}}
+\newcommand{\W}{{\rm W}}
+\newcommand{\TiTj}{{\bf T}_i \cdot {\bf T}_j}
+\newcommand{\ord}{\mathcal{O}}
+\newcommand{\gstrong}{g_s}
+\newcommand{\muNP}{\mu_\text{NP}}
+\newcommand{\amax}{a_2}
+\newcommand{\amin}{a_1}
+\newcommand{\tlambda}{\tilde{\lambda}}
+
+
+
+\renewcommand{\d}{\mathrm{d}}
+
+\newcommand{\SD}{SoftDrop\xspace}
+\newcommand{\ttt}[1]{{\small\texttt{#1}}}
+\newcommand{\fastjet}{\texttt{FastJet}\xspace}
+\newcommand{\fjcontrib}{\texttt{fjcontribtJet}\xspace}
+
+\usepackage{color}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.7}
+\definecolor{darkred}{rgb}{0.5,0,0.0}
+\newcommand{\ms}[1]{\textbf{\color{darkred}  [#1 -- ms]}}
+\newcommand{\gs}[1]{\textbf{\color{darkblue}  [#1 -- gs]}}
+\newcommand{\sm}[1]{\textbf{\color{darkgreen}  [#1 -- sm]}}
+
+
+\def\comix{\textsc{Comix} }
+\def\cascade{\textsc{Cascade} }
+\def\hej{\textsc{Hej} }
+\def\herwig{\textsc{Herwig} }
+\def\madgraph{\textsc{Madgraph} }
+\def\caesar{\textsc{Caesar} }
+\def\F{\mathcal{F}}
+
+\def\jet{{\text{jet}}}
+
+
+\addtolength{\textwidth}{2cm}
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textheight}{2cm}
+\addtolength{\topmargin}{-1cm}
+
+% Trick from Andy Buckley (the HEP one?) to get math parts
+% of section headings to appear in a bold font whenever the
+% normal text also appears in bold
+%
+% http://tex.stackexchange.com/questions/41379/automatically-typeset-math-in-section-headings-in-bold-face
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+
+%========================================================================
+% Now comes the document itself
+%========================================================================
+%%%% IDEAS FOR TITLE
+
+
+\title{{\bf Looking inside jets}: an introduction to jet substructure and boosted-object phenomenology}
+\author[1]{Simone Marzani}
+\author[2]{Gregory Soyez}
+\author[3]{Michael Spannowsky}
+\date{}
+\affil[1]{\emph{Dipartimento di Fisica, Universit\`a di Genova and INFN, Sezione di Genova, Via Dodecaneso 33, 16146, Italy}}
+\affil[2]{\emph{IPhT, CNRS, CEA Saclay, Universit\'e Paris-Saclay, F-91191 Gif-sur-Yvette, France}}
+\affil[3]{\emph{Institute of Particle Physics Phenomenology, Physics Department, Durham University, Durham DH1 3LE, UK}}
+\begin{document}
+
+\maketitle
+
+%\begin{abstract}
+%to be filled
+%\end{abstract}
+
+\include{preface-thanks}
+
+
+\tableofcontents
+\include{introduction}
+\include{qcd-colliders}
+\include{jets-and-algs}
+%\include{experimental}
+\include{calculations-jets}
+\include{groomers-taggers}
+\include{calculations-grooming}
+\include{calculations-quark-gluon}
+\include{calculations-two-prongs}
+\include{calculations-substructure}
+\include{searches-measurements}
+\include{summary}
+
+\appendix
+
+\include{appendix-analytic-details}
+\include{appendix-simulation-details}
+
+
+\clearpage
+
+\addcontentsline{toc}{chapter}{Bibliography}
+% \bibliographystyle{plain}
+% \bibliographystyle{ieeetr}
+\bibliographystyle{JHEP}
+\bibliography{references}
+\end{document}
+
