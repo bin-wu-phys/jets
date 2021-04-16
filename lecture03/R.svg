@@ -169,8 +169,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="919.77196"
-     inkscape:cy="683.27768"
+     inkscape:cx="994.78465"
+     inkscape:cy="675.19646"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -189,7 +189,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -487,5 +487,30 @@
        rx="22.985178"
        ry="8.6862593"
        transform="rotate(41.383127)" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="202.81468"
+       y="-18.212769"
+       id="text996"
+       transform="rotate(43.185667)"><tspan
+         sodipodi:role="line"
+         id="tspan994"
+         x="202.81468"
+         y="-18.212769"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';stroke-width:0.26458332">∆Ω</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="427.09671"
+       y="164.43433"
+       id="text1000"><tspan
+         sodipodi:role="line"
+         id="tspan998"
+         x="427.09671"
+         y="164.43433"
+         style="stroke-width:0.26458332">∆R<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan1002">2</tspan></tspan></text>
   </g>
 </svg>
