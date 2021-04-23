@@ -1,0 +1,50 @@
+\documentclass[onecolumn,noshowpacs,superscriptaddress,nobibnotes,nofootinbib,12pt,showkeys,preprintnumbers]{revtex4-1}
+\UseRawInputEncoding
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{slashed}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\begin{document}
+\maketitle
+\begin{center}
+{\bf
+Exercises in jet physics
+}\\\vspace{2mm}
+(Due on May 21$^{st}$. Please send your solutions to \href{mailto:bin.wu@usc.es}{bin.wu@usc.es}.)
+
+\end{center}
+\begin{enumerate}
+    \item Distance between two particles in the $(y, \phi)$ plane is defined as $$
+    \Delta R_{12}=\sqrt{(y_1-y_2)^2 + (\phi_1-\phi_2)^2}.$$ Prove that $\Delta R_{12}$ is longitudinally boost-invariant.
+    \item In terms of parton distribution functions and Born-level partonic $2\to2$ scattering amplitude, first derive the dijet cross section $$\frac{d\sigma}{dy_1 d^2 p_{T, 1}dy_2 d^2 p_{T, 2}}$$ in pp collisions with $y_i$ and $p_{T, i}$ respectively the rapidity and transverse momentum of jet $i$. Then, derive inclusive jet cross section $\frac{d\sigma}{dy d^2p_T}$ at leading order with $y$ and $p_T$ the jet rapidty and transverse momentum, respectively.
+    \item Given 6 massless partons respectively with
+    $(p_T, y, \phi) = &(100, 0.8, 0), (100, -0.8, 0),$ $(1, 0.2, -0.3), (1, 0.3, 0), (10, -0.15, -0.1)$ and $(8, 0.3, 0.6)$, cluster them into jets with jet radius $R=0.8$ using $k_T$, anti-$k_T$ and Cambridge/Aachen algorithms.
+    \item Prove that leading logarithmic terms in the cumulative distribution $\Sigma\equiv \frac{1}{\sigma^{(0)}}\int_0^{m^2}dm'^2\frac{d\sigma}{dm'^2}$ at $O(\alpha_s^m)$ is given by
+    $$
+    \Sigma^{(m)}=\frac{1}{m!}\left[\frac{\alpha_s C_i}{2\pi}\log^2\frac{p_T^2 R^2}{m^2}\right]^m
+    $$. (Hint: you may prove it by induction since we know the answer for m = 1 and 2.)
+    \item Derive the leading-log mass distribution of QCD jets at $O(\alpha_s)$ after applying trimming. A reminder: the procedure of trimming is as follows
+    \begin{enumerate}
+    \item Take all particles in a jet of radius
+    \vspace{4mm}
+    \item Recluster them into subjets with a jet definition using $R_{trim}$
+    \vspace{4mm}
+    \item Keep only subjets with $p_T^{sub} > z_{cut} p_T^{jet}$
+    \vspace{4mm}
+    \item Recombine them into a single jet
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
